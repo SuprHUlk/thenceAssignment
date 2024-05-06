@@ -1,0 +1,89 @@
+.container-1 {
+  min-height: 100vh;
+  margin: 5rem 2.5rem 2.5rem 2.5rem;
+  background-color: #e8eee7;
+  border-radius: 2rem;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.left {
+  flex: 1;
+
+  position: relative;
+}
+
+.text-3 {
+  padding: 5rem 0 0 5rem;
+}
+
+.text-3 > p {
+  font-family: "Covered By Your Grace";
+  color: #9e9d9d;
+  font-size: x-large;
+  margin: 0;
+}
+
+.text-3 > h1 {
+  font-family: "Manrope";
+  font-size: xxx-large;
+  margin: 0;
+}
+
+.union-img {
+  position: absolute;
+  top: 40%;
+}
+
+.right {
+  flex: 1;
+  position: relative;
+}
+
+.question-img {
+  position: absolute;
+  top: 20%;
+}
+
+.questions {
+  padding: 7rem 2rem 0 2rem;
+}
+
+.faq {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.question {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.question-spl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.faq-spl {
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  margin-top: 0;
+  font-family: "Manrope";
+  font-weight: 400;
+  color: #617275;
+}
+
+@media screen and (min-height: 700px) {
+  .container-1 {
+    min-height: 80vh;
+  }
+}

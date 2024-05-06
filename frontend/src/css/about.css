@@ -1,0 +1,166 @@
+.container {
+  margin: 5rem 1rem 0rem 1rem;
+  min-height: 125vh;
+}
+
+.part-1 {
+  position: relative;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 5rem;
+}
+
+.heading > p {
+  font-family: "Covered By Your Grace";
+  font-weight: 400;
+  font-size: x-large;
+  color: #2da950;
+  margin: 0;
+}
+
+.heading > h1 {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: xxx-large;
+  margin: 0;
+}
+
+.main {
+  position: relative;
+}
+
+.girl-scream-div {
+  position: absolute;
+  left: 14%;
+}
+
+.girl-scream-img {
+  border-radius: 2rem;
+}
+
+.card-1 {
+  position: absolute;
+  top: 66%;
+  left: 60%;
+
+  border-radius: 1rem;
+  width: 13rem;
+  padding: 2rem;
+
+  background-color: #002e18;
+}
+
+.card-1 > h1 {
+  font-size: xxx-large;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+.card-1 > h1 > span {
+  font-size: large;
+  color: #a6a3a0;
+}
+
+.card-1 > h1,
+.card-1 > p {
+  font-family: "Manrope";
+  color: #cccccc;
+  margin: 0;
+}
+
+.card-1 > h1 {
+  color: white;
+}
+
+.card-2-wrapper {
+  position: absolute;
+  top: 25%;
+  left: -25%;
+
+  border-radius: 1rem;
+  box-shadow: 0px 22.59px 36.14px 0px #1e1e1e17;
+  width: 12rem;
+  padding: 1rem;
+
+  background-color: white;
+
+  font-family: "Manrope";
+}
+
+.card-2 {
+  position: relative;
+}
+
+.sparkle-img {
+  position: absolute;
+  top: -33%;
+  left: -24%;
+}
+
+.card-2 > h1 {
+  font-size: xxx-large;
+  margin: 0;
+}
+
+.pill {
+  box-shadow: 0px 15.21px 35.49px 0px #00000017;
+  border-radius: 2rem;
+  background-color: white;
+  font-family: "Manrope";
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  width: 12rem;
+
+  position: absolute;
+  top: 80%;
+  left: -10%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pill > .text > h1 {
+  font-size: x-large;
+  margin: 0;
+}
+
+.pill > .text > p {
+  font-size: small;
+  margin: 0;
+  color: #828282;
+}
+
+.grid-div {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+}
+
+.right-side {
+  position: absolute;
+  bottom: -225%;
+  right: 15%;
+
+  max-width: 20rem;
+
+  font-family: "Manrope";
+  font-weight: 600;
+}
+
+.radio-img {
+  position: absolute;
+  bottom: -30%;
+}
+
+@media screen and (min-height: 700px) {
+  .container {
+    margin: 5rem 1rem 0rem 1rem;
+    min-height: 100vh;
+  }
+}
