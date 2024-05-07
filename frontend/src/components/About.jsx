@@ -7,8 +7,48 @@ import grid from "../assets/grid.png";
 import radio from "../assets/radio.png";
 
 import Button from "@mui/material/Button";
+import { useState } from "react";
 
 const About = () => {
+  const [dotStyle, setDotStyle] = useState({ backgroundColor: "#bbb" });
+  const [btnStyle, setBtnStyle] = useState({
+    position: "absolute",
+    bottom: "-110%",
+    borderRadius: "3rem",
+    backgroundColor: "black",
+    padding: "1.5rem",
+    display: "flex",
+    gap: "1rem",
+  });
+
+  const handleHover1 = () => {
+    setDotStyle((prevState) => ({
+      ...prevState,
+      backgroundColor: "#CAD0CB",
+    }));
+  };
+
+  const handleLeave1 = () => {
+    setDotStyle((prevState) => ({
+      ...prevState,
+      backgroundColor: "#bbb",
+    }));
+  };
+
+  const handleHover2 = () => {
+    setBtnStyle((prevState) => ({
+      ...prevState,
+      backgroundColor: "#4E4E4E",
+    }));
+  };
+
+  const handleLeave2 = () => {
+    setBtnStyle((prevState) => ({
+      ...prevState,
+      backgroundColor: "black",
+    }));
+  };
+
   return (
     <>
       <div className="container">
@@ -55,19 +95,24 @@ const About = () => {
             <h1>
               Enhance fortune 50 company's insights teams research capabilities
             </h1>
-            <img className="radio-img" src={radio} alt="" />
+            <div
+              className="dots"
+              onMouseEnter={handleHover1}
+              onMouseLeave={handleLeave1}
+            >
+              <span
+                className="dot"
+                style={{ backgroundColor: "#2DA950" }}
+              ></span>
+              <span className="dot" style={dotStyle}></span>
+              <span className="dot"></span>
+            </div>
             <Button
-              style={{
-                position: "absolute",
-                bottom: "-110%",
-                borderRadius: "3rem",
-                backgroundColor: "black",
-                padding: "1.5rem",
-                display: "flex",
-                gap: "1rem",
-              }}
+              style={btnStyle}
               variant="contained"
               disableElevation
+              onMouseEnter={handleHover2}
+              onMouseLeave={handleLeave2}
             >
               Explore More
               <svg

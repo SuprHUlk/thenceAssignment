@@ -4,7 +4,7 @@ import Form from "../components/Form";
 const Registration = () => {
   return (
     <>
-      <NavRegistration />
+      <NavRegistration disable={true} />
       <Form />
     </>
   );

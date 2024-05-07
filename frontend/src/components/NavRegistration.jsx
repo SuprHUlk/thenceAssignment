@@ -2,15 +2,30 @@ import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
 import "../css/navRegistration.css";
+import { useEffect, useState } from "react";
 
-const NavRegistration = () => {
+const NavRegistration = (props) => {
   const navigate = useNavigate();
+  const [nav2Style, setNav2Style] = useState({
+    margin: "1rem 1rem 3rem 1rem",
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  });
   const handleClick = () => {
     navigate("/");
   };
+  useEffect(() => {
+    if (!props.disable) {
+      setNav2Style((prevState) => ({
+        ...prevState,
+        margin: "2rem 1rem 3rem 1rem",
+      }));
+    }
+  }, [props]);
   return (
     <>
-      <div className="nav-2">
+      <div className="nav-2" style={nav2Style}>
         <svg
           className="logo"
           width="121"
@@ -24,51 +39,53 @@ const NavRegistration = () => {
             fill="#333333"
           />
         </svg>
-        <div className="btn-close-cont">
-          <Button
-            style={{
-              borderRadius: "2rem",
-              backgroundColor: "white",
-              color: "black",
-              padding: "1rem",
-              border: "2px solid #eaeaea",
-            }}
-            variant="contained"
-            disableElevation
-            onClick={handleClick}
-          >
-            <svg
-              className="close-icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              viewBox="0 0 32 32"
-              fill="none"
+        {props.disable && (
+          <div className="btn-close-cont">
+            <Button
+              style={{
+                borderRadius: "2rem",
+                backgroundColor: "white",
+                color: "black",
+                padding: "1rem",
+                border: "2px solid #eaeaea",
+              }}
+              variant="contained"
+              disableElevation
+              onClick={handleClick}
             >
-              <g clipPath="url(#clip0_11_216)">
-                <path
-                  d="M24 8L8 24"
-                  stroke="#0C1319"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8 8L24 24"
-                  stroke="#0C1319"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_11_216">
-                  <rect width="32" height="32" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </Button>
-        </div>
+              <svg
+                className="close-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="none"
+              >
+                <g clipPath="url(#clip0_11_216)">
+                  <path
+                    d="M24 8L8 24"
+                    stroke="#0C1319"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M8 8L24 24"
+                    stroke="#0C1319"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_11_216">
+                    <rect width="32" height="32" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </Button>
+          </div>
+        )}
       </div>
     </>
   );

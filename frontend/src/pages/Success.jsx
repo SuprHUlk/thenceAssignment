@@ -4,7 +4,7 @@ import Congratulations from "../components/Congratulations";
 const Success = () => {
   return (
     <>
-      <NavRegistration />
+      <NavRegistration disable={false} />
       <Congratulations />
     </>
   );

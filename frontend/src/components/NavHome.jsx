@@ -1,5 +1,6 @@
 import "../css/navHome.css";
 import Button from "@mui/material/Button";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const NavHome = () => {
@@ -7,6 +8,36 @@ const NavHome = () => {
   const handleClick = () => {
     navigate("form");
   };
+
+  const [btnStyle1, setBtnStyle1] = useState({
+    borderRadius: "2rem",
+    backgroundColor: "white",
+    color: "black",
+    padding: "1rem",
+    border: "2px solid #eaeaea",
+    transition: "background-color 0.3s",
+  });
+
+  const handleHover = () => {
+    setBtnStyle1((prevState) => ({
+      ...prevState,
+      backgroundColor: "#F1F1F1",
+    }));
+  };
+
+  const handleLeave = () => {
+    setBtnStyle1((prevState) => ({
+      ...prevState,
+      backgroundColor: "white",
+    }));
+  };
+
+  const btnStyle2 = {
+    borderRadius: "2rem",
+    backgroundColor: "black",
+    padding: "1rem",
+  };
+
   return (
     <>
       <div className="nav">
@@ -25,31 +56,16 @@ const NavHome = () => {
         </svg>
         <div className="buttons">
           <Button
-            style={{
-              borderRadius: "2rem",
-              backgroundColor: "white",
-              color: "black",
-              padding: "1rem",
-              border: "2px solid #eaeaea",
-              "&:hover": {
-                backgroundColor: "grey",
-              },
-            }}
+            style={btnStyle1}
             variant="contained"
             disableElevation
             onClick={handleClick}
+            onMouseEnter={handleHover}
+            onMouseLeave={handleLeave}
           >
             Get Projects
           </Button>
-          <Button
-            style={{
-              borderRadius: "2rem",
-              backgroundColor: "black",
-              padding: "1rem",
-            }}
-            variant="contained"
-            disableElevation
-          >
+          <Button style={btnStyle2} variant="contained" disableElevation>
             Onboard Talent
           </Button>
         </div>

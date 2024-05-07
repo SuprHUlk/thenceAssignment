@@ -153,9 +153,21 @@
   font-weight: 600;
 }
 
-.radio-img {
+.dots {
   position: absolute;
   bottom: -30%;
+  left: 2%;
+
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 @media screen and (min-height: 700px) {

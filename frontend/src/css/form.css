@@ -38,12 +38,16 @@ form {
   border: 1px solid #00000005;
   color: #0d0c22;
 
+  box-sizing: border-box;
+
+  padding-left: 3rem;
+
   font-family: "Manrope";
   font-weight: 500;
   font-size: 20px;
 }
 
 .input::placeholder {
-  padding-left: 2rem;
+  padding-left: 0rem;
   color: #827a7a;
 }
