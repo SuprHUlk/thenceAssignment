@@ -1,15 +1,16 @@
-import "../css/navHome.css";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-const NavHome = () => {
+import "../css/navRegistration.css";
+
+const NavRegistration = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("form");
+    navigate("/");
   };
   return (
     <>
-      <div className="nav">
+      <div className="nav-2">
         <svg
           className="logo"
           width="121"
@@ -23,7 +24,7 @@ const NavHome = () => {
             fill="#333333"
           />
         </svg>
-        <div className="buttons">
+        <div className="btn-close-cont">
           <Button
             style={{
               borderRadius: "2rem",
@@ -31,26 +32,41 @@ const NavHome = () => {
               color: "black",
               padding: "1rem",
               border: "2px solid #eaeaea",
-              "&:hover": {
-                backgroundColor: "grey",
-              },
             }}
             variant="contained"
             disableElevation
             onClick={handleClick}
           >
-            Get Projects
-          </Button>
-          <Button
-            style={{
-              borderRadius: "2rem",
-              backgroundColor: "black",
-              padding: "1rem",
-            }}
-            variant="contained"
-            disableElevation
-          >
-            Onboard Talent
+            <svg
+              className="close-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+            >
+              <g clipPath="url(#clip0_11_216)">
+                <path
+                  d="M24 8L8 24"
+                  stroke="#0C1319"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M8 8L24 24"
+                  stroke="#0C1319"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_11_216">
+                  <rect width="32" height="32" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
           </Button>
         </div>
       </div>
@@ -58,4 +74,4 @@ const NavHome = () => {
   );
 };
 
-export default NavHome;
+export default NavRegistration;
